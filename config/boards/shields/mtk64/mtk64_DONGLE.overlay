@@ -9,5 +9,29 @@
     status = "okay";  
 };
 
+&kscan0 {
+    status = "disabled";
+};
+
+&mtk64_physical_layout {
+    /delete-property/ kscan;
+};
+
+/
+{
+    aliases {
+        led0 = &dongle_led;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        status = "okay";
+
+        dongle_led: led_0 {
+            gpios = <&gpio1 13 GPIO_ACTIVE_LOW>;
+        };
+    };
+};
+
 //&xiao_serial { status = "disabled"; };
 
