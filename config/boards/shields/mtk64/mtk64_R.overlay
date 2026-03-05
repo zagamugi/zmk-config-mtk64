@@ -1,28 +1,13 @@
 #include "mtk64.dtsi"
 #include "mtk64_trackball.dtsi"
 
-&default_transform {
-    row-offset = <7>;
-};
-
-&spi0 {
-    status = "okay";
-};
-
-&trackball { 
-    status = "okay";
-};
-
-/* ここを追加：split に実デバイスを割り当てる */
-&trackball_split {
-    device = <&trackball>;
-};
-
-/* ここは消す：listener は central 側で有効化する */
-#if 0
-&trackball_listener {
-    status = "okay";
-};
-#endif
+&default_transform { row-offset = <7>; };
 
 &xiao_serial { status = "disabled"; };
+
+/* ここ全部コメントアウト（検証用） */
+#if 0
+&spi0 { status = "okay"; };
+&trackball { status = "okay"; };
+&trackball_split { device = <&trackball>; };
+#endif
