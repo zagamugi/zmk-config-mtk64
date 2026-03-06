@@ -5,9 +5,10 @@
     row-offset = <14>;
 };
 
-&xiao_serial { status = "disabled"; };
-
-/* central(FOOT) 側で listener を有効化 */
 &trackball_listener {
     status = "okay";
+};
+
+&xiao_serial {
+    status = "disabled";
 };
