@@ -61,45 +61,35 @@
         #size-cells = <0>;
 
         trackball_split: trackball_split@0 {
-            device = <&trackball>;
             compatible = "zmk,input-split";
             reg = <0>;
         };
     };
 
     trackball_listener: trackball_listener {
-    compatible = "zmk,input-listener";
-    status = "disabled";
-    device = <&trackball_split>;
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&trackball_split>;
 
-    snipe {
-        layers = <1>;
-        input-processors = <&zip_xy_scaler 1 2>;
-        process-next;
-    };
+        snipe {
+            layers = <1>;
+            input-processors = <&zip_xy_scaler 1 2>;
+            process-next;
+        };
 
-    scroll {
-        layers = <3>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 64>;
-        process-next;
-    };
+        scroll {
+            layers = <3>;
+            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 64>;
+            process-next;
+        };
 
-    input-processors = <&zip_temp_layer 6 5000>;
-};
-
+        input-processors = <&zip_temp_layer 6 5000>;
     };
 
     zip_temp_layer: zip_temp_layer {
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>;
-        excluded-positions = <
-            43  // ] 
-            44  // N
-            45  // M
-            46  // <
-            47  // >
-        >; 
+        excluded-positions = <43 44 45 46 47>;
     };
-
 };
