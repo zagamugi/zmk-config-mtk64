@@ -68,23 +68,24 @@
     };
 
     trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-        device = <&trackball>;
+    compatible = "zmk,input-listener";
+    status = "disabled";
+    device = <&trackball_split>;
 
-        snipe {
+    snipe {
         layers = <1>;
         input-processors = <&zip_xy_scaler 1 2>;
         process-next;
-        };
+    };
 
-        scroll {
+    scroll {
         layers = <3>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 64>;
         process-next;
-        };
+    };
 
-        input-processors = <&zip_temp_layer 6 5000>;
+    input-processors = <&zip_temp_layer 6 5000>;
+};
 
     };
 
