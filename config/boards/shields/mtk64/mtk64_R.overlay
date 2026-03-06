@@ -13,8 +13,8 @@
     status = "okay";
 };
 
-&trackball_split {
-    device = <&trackball>;
+&trackball_listener {
+    status = "okay";
 };
 
 &xiao_serial {
