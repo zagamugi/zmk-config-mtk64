@@ -1,13 +1,42 @@
 #include "mtk64.dtsi"
 #include "mtk64_trackball.dtsi"
 
-&default_transform { row-offset = <7>; };
+&default_transform {
+    row-offset = <7>;
+};
+
+/*
+&kscan0 {
+    gpios
+        = <&xiao_d 1 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 3 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 6 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH> 	
+    ;
+};
+*/
+
+&spi0 {
+    status = "okay";
+};
+@@ -27,8 +13,16 @@
+    status = "okay";
+};
+
+/* ここを追加：split に実デバイスを割り当てる */
+&trackball_split {
+    device = <&trackball>;
+};
+
+/* ここは消す：listener は central 側で有効化する */
+#if 0
+&trackball_listener {
+    status = "okay";
+};
+#endif
 
 &xiao_serial { status = "disabled"; };
-
-/* ここ全部コメントアウト（検証用） */
-#if 0
-&spi0 { status = "okay"; };
-&trackball { status = "okay"; };
-&trackball_split { device = <&trackball>; };
-#endif
+&xiao_serial { status = "disabled"; };
