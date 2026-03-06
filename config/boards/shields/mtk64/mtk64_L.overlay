@@ -1,9 +1,17 @@
 #include "mtk64.dtsi"
 
+&default_transform {
+    row-offset = <0>;
+};
+
 &left_encoder {
     status = "okay";
 };
 
 &right_encoder {
     status = "okay";
+};
+
+&xiao_serial {
+    status = "disabled";
 };
