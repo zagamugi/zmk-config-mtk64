@@ -45,7 +45,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp RIGHT LEFT>,
-                <&scroll_up_down SCRL_DOWN SCRL_UP>;
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
         layer_1 {
@@ -83,7 +83,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp RIGHT LEFT>,
-                <&scroll_up_down SCRL_DOWN SCRL_UP>;
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
         function {
