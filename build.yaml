@@ -18,13 +18,15 @@
 #
 ---
 include:
- - board: xiao_ble//zmk
-   shield: mtk64_R rgbled_adapter
-   snippet: studio-rpc-usb-uart
-   cmake-args: -DCONFIG_ZMK_STUDIO=y
- - board: xiao_ble//zmk
-   shield: mtk64_L rgbled_adapter
+  - board: xiao_ble//zmk
+    shield: mtk64_R rgbled_adapter
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: xiao_ble//zmk
+    shield: mtk64_L rgbled_adapter
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
 # - board: xiao_ble//zmk
 #   shield: mtk64_FOOT rgbled_adapter
- - board: xiao_ble//zmk
-   shield: settings_reset
+  - board: xiao_ble//zmk
+    shield: settings_reset
