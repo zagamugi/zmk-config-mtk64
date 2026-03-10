@@ -93,7 +93,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&scroll_up_down SCRL_DOWN SCRL_UP>;
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
         mouse {
@@ -103,7 +103,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp RIGHT LEFT>,
-                <&scroll_up_down SCRL_DOWN SCRL_UP>;
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
     };
 };
