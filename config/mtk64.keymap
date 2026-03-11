@@ -56,13 +56,12 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans  &trans  &trans  &mkp MB4  &mkp MB2  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB5  &mkp MB1  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
-            sensor-bindings = <
-                &scroll_left_right SCRL_LEFT SCRL_RIGHT
-                &scroll_up_down SCRL_UP SCRL_DOWN
-            >;
+            sensor-bindings =
+                <&inc_dec_kp RIGHT LEFT>,
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
         layer_2 {
@@ -78,7 +77,7 @@
 
         tenkey {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp N7  &kp N8  &kp N9  &kp FSLH  &kp STAR  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp ENTER  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &kp N0  &kp DOT  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp N7  &kp N8  &kp N9  &kp FSLH  &kp STAR  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &kp ENTER  &kp EQUAL  &trans  &trans  &trans  &trans  &trans  &kp LA(LC(DELETE))  &kp LC(LA(HOME))  &trans  &trans  &kp N0  &kp N0  &kp DOT  &kp ENTER  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -88,7 +87,7 @@
 
         function {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(LA(DEL))  &kp LC(LA(HOME))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -97,16 +96,6 @@
         };
 
         mouse {
-            bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB4  &mkp MB2  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB5  &mkp MB1  &mkp MB3  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp RIGHT LEFT>,
-                <&scroll_up_down SCRL_UP SCRL_DOWN>;
-        };
-
-        layer_7 {
             bindings = <
 &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB4  &mkp MB2  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB5  &mkp MB1  &mkp MB3  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
