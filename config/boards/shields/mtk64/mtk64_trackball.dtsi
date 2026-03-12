@@ -98,6 +98,9 @@ cursor {
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>;
         excluded-positions = <
+
+            32  // J 
+            33  // K
             43  // ] 
             44  // N
             45  // M
