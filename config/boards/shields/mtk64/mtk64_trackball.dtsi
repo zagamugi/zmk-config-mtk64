@@ -72,11 +72,6 @@
         status = "okay";
         device = <&trackball_split>;
 
-cursor {
-        input-processors = <&zip_xy_scaler 2 2>;
-        process-next;
-    };
-
         snipe {
         layers = <1>;
         input-processors = <&zip_xy_scaler 1 1>;
