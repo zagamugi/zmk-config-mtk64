@@ -14,7 +14,7 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 6 5000>;
+    input-processors = <&zip_temp_layer 6 3000>;
 };
 
 / {
@@ -32,8 +32,80 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <20>; // スクロールのタップ時間
+
         };
-    };
+        us_1: us_1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp JP_EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_2: us_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp JP_AT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_3: us_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp JP_HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_4: us_4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp JP_DLLR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_5: us_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp JP_PRCNT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_6: us_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp JP_CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_7: us_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp JP_AMPS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_8: us_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp JP_ASTRK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_9: us_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp JP_LPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        us_0: us_0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp JP_RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };    
+
+
+};
 };
 
 / {
