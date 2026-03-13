@@ -17,6 +17,7 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
+---
 include:
  - board: xiao_ble//zmk
    shield: mtk64_R rgbled_adapter
@@ -25,7 +26,7 @@ include:
    shield: mtk64_L rgbled_adapter
 
  - board: xiao_ble//zmk
-   shield: mtk64_DONGLE rgbled_adapter
+   shield: mtk64_DONGLE rgbled_adapter dongle_display
    snippet: studio-rpc-usb-uart
    cmake-args: -DCONFIG_ZMK_STUDIO=y
 
