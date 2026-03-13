@@ -16,7 +16,7 @@
     quick-tap-ms = <0>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 5000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 6 3000>; };
 
 / {
     behaviors {
