@@ -8,6 +8,7 @@
 // スクロール量の設定
 
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 &mt {
@@ -94,7 +95,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LEFT RIGHT>,
+                <&scroll_left_right SCRL_LEFT SCRL_RIGHT>,
                 <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
 
