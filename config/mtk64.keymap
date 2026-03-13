@@ -9,14 +9,14 @@
 
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 70
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 3000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 6 2000>; };
 
 / {
     behaviors {
