@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: caksoylar
       url-base: https://github.com/caksoylar
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    - name: zagamugi
+      url-base: https://github.com/zagamugi
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,7 +22,7 @@ manifest:
       remote: caksoylar
       revision: main
     - name: zmk-dongle-display
-      remote: mentako-ya
+      remote: zagamugi
       revision: mentako_zephyr-4.1
   self:
     path: config
