@@ -129,7 +129,7 @@
         default_layer {
             display-name = "DEF";
             bindings = <
-&kp ESC  &us_1  &us_2  &us_3  &us_4  &us_5  &us_6  &us_7  &us_8  &us_9  &us_0  &kp JP_MINUS  &kp LC(SPACE)  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp  &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp L  &kp JP_COLON  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LALT  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp SLASH  &kp LCTRL  &kp LGUI  &kp SPACE  &kp INTERNATIONAL_4  &kp DEL  &kp BSPC  &kp RSHFT  &kp RIGHT_SHIFT  &sl 5  &tog 4  &kp F2  &kp F4  &none  &none  &kp ENTER  &kp ENTER  &kp ENTER  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2
+&kp ESC  &us_1  &us_2  &us_3  &us_4  &us_5  &us_6  &us_7  &us_8  &us_9  &us_0  &kp MINUS  &kp LC(SPACE)  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp TILDE  &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp L  &kp UNDERSCORE  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LALT  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp UP_ARROW  &kp LCTRL  &kp LGUI  &kp SPACE  &kp INTERNATIONAL_4  &kp DEL  &kp BSPC  &kp RSHFT  &kp DOWN_ARROW  &sl 5  &tog 4  &kp F2  &kp F4  &none  &none  &kp ENTER  &kp ENTER  &kp ENTER  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2  &mo 3  &mo 1  &mo 2
             >;
 
             sensor-bindings =
