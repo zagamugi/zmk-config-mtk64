@@ -9,7 +9,7 @@
 
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 90
 
 &mt {
     flavor = "balanced";
