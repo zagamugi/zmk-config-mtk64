@@ -95,6 +95,7 @@
        excluded-positions = <
     31  // J
     32  // K
+    36  // LSHIFT
     44  // N
     45  // M
     46  // ,
