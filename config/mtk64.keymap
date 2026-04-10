@@ -193,7 +193,7 @@
         mouse {
             display-name = "AML";
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB5  &mkp MB3  &none  &none  &none  &kp LEFT_SHIFT  &none  &none  &none  &none  &none  &to 0  &to 0  &mkp MB4  &mkp MB1  &mkp MB2  &none  &none  &msc SCRL_UP  &none  &none  &trans  &trans  &trans  &trans  &none  &msc SCRL_DOWN  &none  &none  &trans  &trans  &none  &none  &trans  &trans  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB5  &mkp MB3  &none  &none  &none  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &none  &none  &to 0  &to 0  &mkp MB4  &mkp MB1  &mkp MB2  &none  &none  &msc SCRL_UP  &kp LCTRL  &none  &trans  &trans  &trans  &trans  &none  &msc SCRL_DOWN  &none  &none  &trans  &trans  &none  &none  &trans  &trans  &none  &none  &none  &none  &none  &none  &none  &none  &none
             >;
 
             sensor-bindings =
