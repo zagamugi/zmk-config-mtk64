@@ -32,6 +32,37 @@ https://github.com/caksoylar/zmk-rgbled-widget
 - レイヤ−３ スクロールモード　         トラックボールでスクロール
 - レイヤ−６ オートマウスレーイヤー　　　右手キーボードはマウスボタン操作用マッピング　オートマウスレイヤ動作時の遷移先　         
 
+## 各種ブランチについて
+キーボードの構成に応じたブランチのソースを使用してください。
+
+### 左右構成用ファームウェアブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/right_left
+
+### 左右＋フットスイッチ無線化モジュール用ブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/maste/right_left_foot
+
+### 左右＋ドングルモジュール用ブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/right_left_dongle
+
+### 左右＋ドングルモジュールOLED用ブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/right_left_dongle-display
+
+### 左右＋ドングルモジュールOLED＋フットスイッチ無線化モジュール用ブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/right_left_dongle-display_foot
+
+### 左ボール右エンコーダー＋ドングルモジュールOLED用ブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/right_left_dongle-display_left-ball
+
+### 左右＋ドングルモジュール(MDBT50Q-RX)用ブランチ
+
+https://github.com/mentako-ya/zmk-config-mtk64/tree/right_left_dongle-mdbt50q_rx
+
 ## フォークとカスタマイズ
 リポジトリをフォークして、キーマップや各種機能のカスタマイズにご使用ください。
 
@@ -83,10 +114,13 @@ https://github.com/caksoylar/zmk-rgbled-widget
     ```
     mtk64_R rgbled_adapter-xiao_ble-zmk.uf2       右手用ファームウェア
     mtk64_L rgbled_adapter-xiao_ble-zmk.uf2       左手用ファームウェア
-    mtk64_DONGLE rgbled_adapter-xiao_ble-zmk.uf2    ドングル用ファームウェア
+    mtk64_DONGLE rgbled_adapter-xiao_ble-zmk.uf2  ドングル用ファームウェア※
+    mtk64_FOOT rgbled_adapter-xiao_ble-zmk.uf2    フットスイッチ用ファームウェア※
     settings_reset-xiao_ble-zmk.uf2               リセット用ファイル
     ```
 
-4. USBケーブルでキーボードを接続して、リセットスイッチをダブルクリックすると、リムーバブルディスク"XIAO-SENSE"として認識されます。
+    ※ ビルドしたファームウェアのブランチによって構成が変わります。
+
+4. USBケーブルでキーボード、ドングル、フットスイッチモジュールを接続して、リセットスイッチをダブルクリックすると、リムーバブルディスク"XIAO-SENSE"として認識されます。
 
     まず　settings_reset-xiao_ble-zmk.uf2　をリムーバブルディスクに書き込み、再度リセットスイッチをダブルクリックして、新しいファームウェアを書き込んでください。
