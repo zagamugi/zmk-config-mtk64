@@ -93,7 +93,7 @@
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>;
        excluded-positions = <
-    31  // J
+
     32  // K
     33  // L
     36  // LSHIFT
@@ -101,15 +101,11 @@
     38  // X
     39  // C
     40  // V
-    42  //
-    43  //
-    44  // N
     45  // M
     46  // ,
     47  // .
     49  // UP
     50  // LCTRL
-    55  // BSPC
     57  // DOWN
 
 >;
