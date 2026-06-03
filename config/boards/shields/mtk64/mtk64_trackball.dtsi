@@ -94,6 +94,8 @@
         require-prior-idle-ms = <500>;
        excluded-positions = <
 
+    30  // H
+    31  // J
     32  // K
     33  // L
     36  // LSHIFT
