@@ -20,7 +20,9 @@
     release-after-ms = <180>;
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 1200>; };
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 6 1200>;
+};
 
 / {
     macros {
@@ -40,21 +42,25 @@
             label = "MACRO_LEFT_CLICK";
         };
     };
-};
 
-/ {
     behaviors {
+        // 垂直スクロール用のbehaviorの設定
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
             tap-ms = <20>;
         };
+
+        // 水平スクロール用のbehaviorの設定
 
         scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
             tap-ms = <20>;
         };
 
@@ -62,6 +68,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp JP_EXCL>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -69,6 +76,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp JP_AT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -76,6 +84,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N3>, <&kp JP_HASH>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -83,6 +92,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp JP_DLLR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -90,6 +100,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp JP_PRCNT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -97,6 +108,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp JP_CARET>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -104,6 +116,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp JP_AMPS>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -111,6 +124,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp JP_ASTRK>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -118,6 +132,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp JP_LPAR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -125,7 +140,87 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&kp JP_RPAR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            display-name = "DEF";
+            bindings = <
+&kp ESC  &us_1  &us_2  &us_3  &us_4  &us_5  &us_6  &us_7  &us_8  &us_9  &us_0  &kp JP_MINUS  &kp LA(GRAVE)  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp JP_TILDE  &kp TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT  &kp LS(INT1)  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp LALT  &kp LEFT  &kp N  &kp M  &kp JP_COMMA  &kp JP_DOT  &kp RIGHT  &kp UP_ARROW  &kp LCTRL  &kp LGUI  &kp SPACE  &kp INTERNATIONAL_4  &kp DEL  &kp BSPC  &kp JP_SLASH  &kp DOWN_ARROW  &sl 5  &tog 4  &kp F2  &kp F4  &none  &none  &kp ENTER  &kp ENTER  &none  &none  &none  &none  &none  &none  &none  &none  &none
+            >;
+
+            sensor-bindings =
+                <&scroll_left_right SCRL_LEFT SCRL_RIGHT>,
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
+        };
+
+        layer_1 {
+            display-name = "SNP";
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &studio_unlock  &trans  &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS  &trans  &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &trans  &kp F12  &trans  &kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &trans  &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_2 {
+            display-name = "MSE";
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &kp MINUS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS  &trans  &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &trans  &kp F12  &trans  &kp SLASH  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &trans  &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp EQUAL  &mkp MB4  &mkp MB5  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <
+                &inc_dec_kp TAB LS(TAB)
+                &inc_dec_kp PG_UP PG_DN
+            >;
+        };
+
+        layer_3 {
+            display-name = "SCR";
+            bindings = <
+&kp ESCAPE  &kp LC(LS(TAB))  &kp UP_ARROW  &kp LC(TAB)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans  &kp LG(LS(RIGHT_ARROW))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &none  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <
+                &scroll_left_right SCRL_LEFT SCRL_RIGHT
+                &scroll_up_down SCRL_UP SCRL_DOWN
+            >;
+        };
+
+        tenkey {
+            display-name = "10";
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &kp N7  &kp N8  &kp N9  &kp JP_SLASH  &kp JP_ASTRK  &trans  &trans  &trans  &trans  &trans  &bt BT_CLR  &trans  &kp N4  &kp N5  &kp N6  &kp JP_PLUS  &kp KP_MINUS  &trans  &trans  &trans  &trans  &kp LC(LA(DEL))  &kp C_AC_HOME  &trans  &kp N1  &kp N2  &kp N3  &none  &kp JP_EQUAL  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp N0  &kp N0  &kp DOT  &none  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&scroll_left_right SCRL_LEFT SCRL_RIGHT>,
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
+        };
+
+        function {
+            display-name = "F*";
+            bindings = <
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
+        };
+
+        mouse {
+            display-name = "AML";
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &mkp MB4  &mkp MB5  &mkp MB3  &none  &none  &none  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V  &none  &to 0  &to 0  &none  &macro_left_click  &mkp MB2  &none  &none  &msc SCRL_UP  &kp LCTRL  &none  &trans  &trans  &trans  &trans  &none  &msc SCRL_DOWN  &none  &none  &trans  &trans  &none  &none  &trans  &trans  &none  &none  &none  &none  &none  &none  &none  &none  &none
+            >;
+
+            sensor-bindings =
+                <&scroll_left_right SCRL_LEFT SCRL_RIGHT>,
+                <&scroll_up_down SCRL_UP SCRL_DOWN>;
         };
     };
 };
