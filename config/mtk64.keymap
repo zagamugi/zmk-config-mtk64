@@ -18,7 +18,7 @@
 
 &sl { release-after-ms = <180>; };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 1200>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 6 2000>; };
 
 / {
     macros {
@@ -32,7 +32,7 @@
                 <&macro_release>,
                 <&mkp MB1>,
                 <&macro_tap>,
-                <&to 0 &sl 6>;
+                <&sl 6>;
 
             label = "MACRO_LEFT_CLICK";
         };
